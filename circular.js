@@ -1,4 +1,6 @@
 
 const circular = {
-    circular
+    circular: undefined
 }
+
+circular.circular = circular
