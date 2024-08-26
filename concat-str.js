@@ -1,3 +1,3 @@
 // Concatenation
 
-const concatStr = (a, b) => a + " " + b;
+const concatStr = (a, b) => String(a) + String(b);
