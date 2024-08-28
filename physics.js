@@ -5,7 +5,7 @@ const getAcceleration = (n) => {
     }
 
     if (n.Δv !== undefined && n.Δt !== undefined) {
-        return Number(Δv/Δt);
+        return Number(n.Δv/n.Δt);
     }
 
     if (n.d !== undefined && n.t !== undefined) {
