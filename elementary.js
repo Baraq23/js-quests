@@ -1,13 +1,13 @@
 const multiply = (a, b) => {
-    let negA = 1
-    let negB = 1
+    let negA = false
+    let negB = false
     if (a < 0) {
-        a *= -1
-        negA = -1
+        negA = true
+        a = Math.abs(a)
     }
     if (b < 0) {
-        b *= -1
-        negB = -1
+        negB = true
+        b = Math.abs(b)
     }
     let results = 0;
     let count = 0;
@@ -15,39 +15,55 @@ const multiply = (a, b) => {
         results += a
         count++
     }
-    return results * negA * negB
+    if ((negA && negB) || (!negA && !negB)){
+        return results
+    }
+    return -results
 }
 
 const divide = (a, b) => {
-    let negA = 1
-    let negB = 1
+    let negA = false
+    let negB = false
     if (a < 0) {
-        a *= -1
-        negA = -1
+        negA = true
+        a = Math.abs(a)
     }
     if (b < 0) {
-        b *= -1
-        negB = -1
+        negB = true
+        b = Math.abs(b)
     }
+
     let results = a;
     let count = 0;
-    while (results != 0 && results > 0) {
+
+    while (results >= b) {
         results -= b
         count++
     }
-    return count * negA * negB
+
+    if ((negA && negB) || (!negA && !negB)) {
+        return count
+    }
+    return -count
 }
 
 const modulo = (a, b) => {
+    let negA = false
+    let negB = false
     if (a < 0) {
-        a *= -1
+        negA = true
+        a = Math.abs(a)
     }
     if (b < 0) {
-        b *= -1
+        negB = true
+        b = Math.abs(b)
     }
     let results = a;
     while (results >= b) {
         results -= b
+    }
+    if (negA) {
+        return -results
     }
     return results
 }
