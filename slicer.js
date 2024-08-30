@@ -1,4 +1,4 @@
-const slicer = (arr, s, n) => {
+const slice = (arr, s, n) => {
     if (n !== undefined){
         let res = []
         for (i = s; i <= n; i++) {
