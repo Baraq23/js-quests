@@ -1,7 +1,7 @@
 
 const indexOf = (arr, item, n) => {
     // arr.indexOf(item);
-    if (Boolean(n)) {
+    if (typeof n !== undefined) {
         let indx = -1
         for (let i = 0; i < arr.length; i++) {
             if (i >= n) {
@@ -24,7 +24,7 @@ const indexOf = (arr, item, n) => {
 
 const lastIndexOf = (arr, item, n) => {
     // arr.lastIndexOf(item)
-    if (Boolean(n)) {
+    if (typeof n !== undefined) {
         let indx = -1
         for (let i = n; i > arr.length; i++) {
             if (item === arr[i]) {
