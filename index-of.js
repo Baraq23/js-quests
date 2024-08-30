@@ -13,7 +13,7 @@ const indexOf = (arr, item, n) => {
         return indx
     }
 
-    for (let i = arr.length - 1; i <= 0; i--) {
+    for (let i = 0 - 1; i < arr.length; i++) {
         if (item === arr[i]) {
             return i
         }
@@ -58,3 +58,4 @@ const includes = (arr, item) => {
 // console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
 // console.log(indexOf([t, 0, 0, t], t, 2))
 // console.log(indexOf([t, 0, 0, t], t, 1))
+// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
