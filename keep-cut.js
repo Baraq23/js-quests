@@ -1,7 +1,4 @@
 const cutFirst = (s) => {
-    if (s.length < 2) {
-        return ''
-    }
     let res = []
     for (let i = 2; i < s.length; i++) {
         res += s[i]
@@ -10,9 +7,6 @@ const cutFirst = (s) => {
 }
 
 const cutLast = (s) => {
-    if (s.length < 2) {
-        return ''
-    }
     let res = []
     for (let i = 0; i < s.length-2; i++) {
         res += s[i]
@@ -21,9 +15,6 @@ const cutLast = (s) => {
 }
 
 const cutFirstLast = (s) => {
-    if (s.length < 4) {
-        return ''
-    }
     let res = []
     for (let i = 2; i < s.length-2; i++) {
         res += s[i]
@@ -32,40 +23,42 @@ const cutFirstLast = (s) => {
 }
 
 const keepFirst = (s) => {
-    if (s.length < 2) {
-        return ''
-    }
     let res = []
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < s.length; i++) {
         res += s[i]
+        if (i === 2) {
+            break
+        }
     }
     return res
 }
 
 const keepLast = (s) => {
-    if (s.length < 2) {
-        return ''
-    }
     let res = []
-    for (let i = s.length-2; i < s.length; i++) {
-        res += s[i]
+    let count = 0
+    for (let i = s.length-1; i >= 0; i--) {
+        res = s[i] + res
+        count++
+        if (count == 2) {
+            break
+        }
     }
     return res
 }
 
 const keepFirstLast = (s) => {
-    if (s.length < 4) {
-        return ''
-    }
     let res = []
-    res += keepFirst(s)
-    res += keepLast(s)
+    for (let i = 0; i < s.length; i++) {
+        if (i === 0 || i === 1 || i === s.length-2 || i === s.length-1) {
+            res+=s[i]
+        }
+    }
     return res
 }
 
 // console.log(cutFirst('hello'))
 // console.log(cutLast('hello'))
 // console.log(cutFirstLast('jjhellojj'))
-// console.log(keepFirst('jjhellojj'))
-// console.log(keepLast('hello'))
+// console.log(keepFirst('j'))
+// console.log(keepFirstLast('hellox'))
 // console.log(keepFirstLast('jjhellojj'))
