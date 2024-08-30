@@ -7,7 +7,7 @@ const slice = (arr, s, n) => {
     }
     if (n !== undefined){
         let res = []
-        for (let i = s; i <= n; i++) {
+        for (let i = s; i < n; i++) {
             if (arr instanceof Array) {
                 res.push(arr[i])
             } else {
@@ -30,9 +30,10 @@ const slice = (arr, s, n) => {
 // let a = ['a', 'b', 'c', 'd', 'e']
 // let b = ['a', 'b', 'c', 'd', 'e']
 
-// console.log(slicer(a, 3))
-// console.log(slicer(a, 2, 3))
-// console.log(slicer('hellow', 2, 3))
-// console.log(slicer('hellow', 1))
+// console.log(slice(a, 3))
+// console.log(slice(a, 2, 3))
+// console.log(slice('hellow', 2, 3))
+// console.log(slice('hellow', 1))
 // console.log(slice('abcdef', 2))
 // console.log(slice('abcdef', -2))
+// console.log(slice('abcdef', 0, 2))
