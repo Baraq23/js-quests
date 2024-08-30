@@ -1,6 +1,20 @@
 
-const indexOf = (arr, item) => {
+const indexOf = (arr, item, n) => {
     // arr.indexOf(item);
+    if (Boolean(n)) {
+        let count = 0
+        let indx = -1
+        for (let i = 0; i < arr.length; i++) {
+            if (item === arr[i]) {
+                count++
+                if (count === n) {
+                    indx = i
+                }
+            }
+        }
+        return indx
+    }
+
     for (let i = 0; i < arr.length; i++) {
         if (item === arr[i]) {
             return i
@@ -30,5 +44,6 @@ const includes = (arr, item) => {
     }
     return false
 }
-
-console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
+// var t;
+// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
+// console.log(indexOf([t, 0, 0, t], t, 2))
