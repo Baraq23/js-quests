@@ -42,7 +42,7 @@ const includes = (arr, item) => {
     }
     return false
 }
-var t;
-console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
-console.log(indexOf([t, 0, 0, t], t, 2))
-console.log(indexOf([t, 0, 0, t], t, 1))
+// var t;
+// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
+// console.log(indexOf([t, 0, 0, t], t, 2))
+// console.log(indexOf([t, 0, 0, t], t, 1))
