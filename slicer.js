@@ -1,7 +1,7 @@
 const slice = (arr, s, n) => {
     if (n !== undefined){
         let res = []
-        for (i = s; i <= n; i++) {
+        for (let i = s; i <= n; i++) {
             if (arr instanceof Array) {
                 res.push(arr[i])
             } else {
@@ -11,7 +11,7 @@ const slice = (arr, s, n) => {
         return res
     }
     let res = []
-    for (i = s; i < arr.length; i++) {
+    for (let i = s; i < arr.length; i++) {
         if (arr instanceof Array) {
             res.push(arr[i])
         } else {
@@ -28,3 +28,4 @@ const slice = (arr, s, n) => {
 // console.log(slicer(a, 2, 3))
 // console.log(slicer('hellow', 2, 3))
 // console.log(slicer('hellow', 1))
+console.log(slice('abcdef', 2))
