@@ -1,7 +1,7 @@
 
 const indexOf = (arr, item) => {
     // arr.indexOf(item);
-    for (let i = arr.length; i > 0; i--) {
+    for (let i = 0; i < arr.length; i++) {
         if (item === arr[i]) {
             return i
         }
@@ -12,7 +12,7 @@ const indexOf = (arr, item) => {
 
 const lastIndexOf = (arr, item) => {
     // arr.lastIndexOf(item)
-    for (let i = arr.length; i > 0; i--) {
+    for (let i = 0; i < arr.length; i++) {
         let indx = -1
         if (item === arr[i]) {
             indx = i
@@ -23,10 +23,12 @@ const lastIndexOf = (arr, item) => {
 
 const includes = (arr, item) => {
     // arr.includes(item)
-    for (let i = arr.length; i > 0; i--) {
+    for (let i = 0; i < arr.length; i++) {
         if (item === arr[i]) {
             return true
         }
     }
     return false
 }
+
+console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
