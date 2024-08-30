@@ -13,7 +13,7 @@ const indexOf = (arr, item, n) => {
         return indx
     }
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = arr.length - 1; i <= 0; i--) {
         if (item === arr[i]) {
             return i
         }
@@ -24,7 +24,19 @@ const indexOf = (arr, item, n) => {
 
 const lastIndexOf = (arr, item) => {
     // arr.lastIndexOf(item)
-    for (let i = 0; i < arr.length; i++) {
+    if (Boolean(n)) {
+        let indx = -1
+        for (let i = arr.length - 1; i < 0; i--)  {
+            if (i >= n) {
+                if (item === arr[i]) {
+                    indx = i
+                }
+            }
+        }
+        return indx
+    }
+    
+    for (let i = arr.length - 1; i < 0; i--) {
         let indx = -1
         if (item === arr[i]) {
             indx = i
