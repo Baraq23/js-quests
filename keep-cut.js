@@ -1,4 +1,7 @@
 const cutFirst = (s) => {
+    if (s.length < 2) {
+        return ''
+    }
     let res = []
     for (let i = 2; i < s.length; i++) {
         res += s[i]
@@ -7,6 +10,9 @@ const cutFirst = (s) => {
 }
 
 const cutLast = (s) => {
+    if (s.length < 2) {
+        return ''
+    }
     let res = []
     for (let i = 0; i < s.length-2; i++) {
         res += s[i]
@@ -15,6 +21,9 @@ const cutLast = (s) => {
 }
 
 const cutFirstLast = (s) => {
+    if (s.length < 4) {
+        return ''
+    }
     let res = []
     for (let i = 2; i < s.length-2; i++) {
         res += s[i]
@@ -23,6 +32,9 @@ const cutFirstLast = (s) => {
 }
 
 const keepFirst = (s) => {
+    if (s.length < 2) {
+        return ''
+    }
     let res = []
     for (let i = 0; i < 2; i++) {
         res += s[i]
@@ -31,6 +43,9 @@ const keepFirst = (s) => {
 }
 
 const keepLast = (s) => {
+    if (s.length < 2) {
+        return ''
+    }
     let res = []
     for (let i = s.length-2; i < s.length; i++) {
         res += s[i]
@@ -39,6 +54,9 @@ const keepLast = (s) => {
 }
 
 const keepFirstLast = (s) => {
+    if (s.length < 4) {
+        return ''
+    }
     let res = []
     res += keepFirst(s)
     res += keepLast(s)
