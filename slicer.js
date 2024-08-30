@@ -28,4 +28,4 @@ const slice = (arr, s, n) => {
 // console.log(slicer(a, 2, 3))
 // console.log(slicer('hellow', 2, 3))
 // console.log(slicer('hellow', 1))
-console.log(slice('abcdef', 2))
+// console.log(slice('abcdef', 2))
