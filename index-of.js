@@ -22,27 +22,25 @@ const indexOf = (arr, item, n) => {
 }
 
 
-const lastIndexOf = (arr, item) => {
+const lastIndexOf = (arr, item, n) => {
     // arr.lastIndexOf(item)
     if (Boolean(n)) {
         let indx = -1
-        for (let i = arr.length - 1; i < 0; i--)  {
-            if (i >= n) {
-                if (item === arr[i]) {
-                    indx = i
-                }
+        for (let i = n; i > arr.length; i++) {
+            if (item === arr[i]) {
+                indx = i
             }
         }
         return indx
     }
-    
-    for (let i = arr.length - 1; i < 0; i--) {
-        let indx = -1
+
+    let indx2 = -1
+    for (let i = arr.length - 1; i >= 0; i--) {
         if (item === arr[i]) {
-            indx = i
+            return i
         }
     }
-    return indx
+    return indx2
 }
 
 const includes = (arr, item) => {
@@ -58,4 +56,4 @@ const includes = (arr, item) => {
 // console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
 // console.log(indexOf([t, 0, 0, t], t, 2))
 // console.log(indexOf([t, 0, 0, t], t, 1))
-// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
+console.log(lastIndexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
