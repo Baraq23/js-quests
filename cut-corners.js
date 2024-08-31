@@ -24,7 +24,7 @@ const round = (n) => {
     }
 }
 
-function floor(n) {
+const floor = (n) => {
     let neg = false;
     if (n < 0) {
         neg = true;
@@ -43,7 +43,7 @@ function floor(n) {
     }
 }
 
-function ceil(n) {
+const ceil = (n) => {
     if (!n) return 0;
     let neg = false;
     if (n < 0) {
@@ -66,7 +66,7 @@ function ceil(n) {
     }
 }
 
-function trunc(n) {
+const trunc = (n) => {
     let num = 0;
     if (n > 0xfffffffff) {
         n -= 0xfffffffff;
