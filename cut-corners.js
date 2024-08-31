@@ -2,23 +2,23 @@
 //     return n % d
 // }
 const modulo = (a, b) => {
-    let negA = false
-    let negB = false
-    if (a < 0) {
-        negA = true
-        a = Math.abs(a)
-    }
-    if (b < 0) {
-        negB = true
-        b = Math.abs(b)
-    }
+    // let negA = false
+    // let negB = false
+    // if (a < 0) {
+    //     negA = true
+    //     a = Math.abs(a)
+    // }
+    // if (b < 0) {
+    //     negB = true
+    //     b = Math.abs(b)
+    // }
     let results = a;
     while (results >= b) {
         results -= b
     }
-    if (negA) {
-        return -results
-    }
+    // if (negA) {
+    //     return -results
+    // }
     return results
 }
 
