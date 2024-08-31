@@ -1,5 +1,5 @@
 const vowelDots = (s) => {
-    let vowels =/[aeiou]/gi
+    let vowels = /(a|e|i|o|u)/g
     let n = s.replace(vowels, "$&.")
     return n
 }
