@@ -1,21 +1,34 @@
 const cutFirst = (s) => {
-    let res = []
+    if (s.length <= 2) {
+        return ''
+    }
+    let res = ''
     for (let i = 2; i < s.length; i++) {
         res += s[i]
+        if (i===1){
+            break
+        }
     }
     return res
 }
 
 const cutLast = (s) => {
-    let res = []
-    for (let i = 0; i < s.length-2; i++) {
+    if (s.length <= 2) {
+        return ''
+    }
+    let res = ''
+
+    for (let i = 0; i < s.length - 2; i++) {
         res += s[i]
     }
-    return res
+    return res    
 }
 
 const cutFirstLast = (s) => {
-    let res = []
+    if (s.length <= 4) {
+        return ''
+    }
+    let res = ''
     for (let i = 2; i < s.length-2; i++) {
         res += s[i]
     }
@@ -23,10 +36,10 @@ const cutFirstLast = (s) => {
 }
 
 const keepFirst = (s) => {
-    let res = []
+    let res = ''
     for (let i = 0; i < s.length; i++) {
         res += s[i]
-        if (i === 2) {
+        if (i === 1) {
             break
         }
     }
@@ -34,7 +47,7 @@ const keepFirst = (s) => {
 }
 
 const keepLast = (s) => {
-    let res = []
+    let res = ''
     let count = 0
     for (let i = s.length-1; i >= 0; i--) {
         res = s[i] + res
@@ -47,7 +60,7 @@ const keepLast = (s) => {
 }
 
 const keepFirstLast = (s) => {
-    let res = []
+    let res = ''
     for (let i = 0; i < s.length; i++) {
         if (i === 0 || i === 1 || i === s.length-2 || i === s.length-1) {
             res+=s[i]
@@ -56,9 +69,12 @@ const keepFirstLast = (s) => {
     return res
 }
 
-// console.log(cutFirst('hello'))
-// console.log(cutLast('hello'))
-// console.log(cutFirstLast('jjhellojj'))
-// console.log(keepFirst('j'))
+// console.log(cutFirst('hel'))
+// console.log(cutLast('hel'))
+// console.log(cutFirstLast('jjj'))
+// console.log(keepFirst('jell'))
+// console.log(keepLast(''))
 // console.log(keepFirstLast('hellox'))
+// console.log(keepFirstLast('heox'))
+// console.log(keepFirstLast('h'))
 // console.log(keepFirstLast('jjhellojj'))
