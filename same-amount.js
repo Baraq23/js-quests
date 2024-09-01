@@ -3,7 +3,7 @@ const sameAmount = (s, r1, r2) => {
     r2 = new RegExp(r2, 'g')
     let s1 = s.match(r1);
     let s2 = s.match(r2);
-    if (si !== null && s2 !== null && s1.length === s2.length) {
+    if (s1 !== null && s2 !== null && s1.length === s2.length) {
         return true
     }
     return false
