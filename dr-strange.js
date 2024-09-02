@@ -16,11 +16,11 @@ const addWeek = (date) => {
         "secondSunday"
     ]
     
-    git
+    // git
 }
 
 console.log(addWeek(new Date('0001-01-01')))
 
-const timeTravel = () => {
+// const timeTravel = () => {
     
-}
+// }
