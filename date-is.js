@@ -24,7 +24,7 @@ const isBefore = (a,b) => {
 }
 
 const isFuture = (a) => {
-    if (isValid(new Date(a))) {
+    if (isValid(a)) {
         var tA = new Date(a).getTime()
         var today = new Date().getTime()
         return today < tA
@@ -33,7 +33,7 @@ const isFuture = (a) => {
 }
 
 const isPast = (a) => {
-    if (isValid(new Date(a))) {
+    if (isValid(a)) {
         var tA = new Date(a).getTime()
         var today = new Date().getTime()
         return today > tA
