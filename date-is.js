@@ -1,5 +1,8 @@
 
 const isValid = (a) => {
+    if (isNaN(a)) {
+        return false
+    }
 
     if ((typeof a === 'number')) {
         a = new Date(a)
@@ -40,6 +43,7 @@ const isPast = (a) => {
 
 // var d =  '2013-01-01'
 // console.log(isValid(d))
+// console.log(isValid(NaN))
 // console.log(d.getTime())
 
 
