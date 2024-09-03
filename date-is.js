@@ -4,7 +4,7 @@ const isValid = (a) => {
     if ((typeof a === 'number') && ((new Date(a)) instanceof Date)) {
         return true
     }
-    return a instanceof Date && !isNaN(d);
+    return a instanceof Date && !isNaN(a);
 }
 
 const isAfter = (a,b) => {
