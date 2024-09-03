@@ -5,14 +5,14 @@ const addWeek = (date) => {
         "Wednesday",
         "Thursday",
         "Friday",
-        "Sarurday",
+        "Saturday",
         "Sunday",
         "secondMonday",
         "secondTuesday",
         "secondWednesday",
         "secondThursday",
         "secondFriday",
-        "secondSarurday",
+        "secondSaturday",
         "secondSunday"
     ]
     
