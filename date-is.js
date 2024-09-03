@@ -18,8 +18,8 @@ const isAfter = (a,b) => {
 }
 
 const isBefore = (a,b) => {
-    var tA = new Date().getTime()
-    var tB = new Date().getTime()
+    var tA = new Date(a).getTime()
+    var tB = new Date(b).getTime()
     return tA < tB
 }
 
@@ -45,6 +45,7 @@ const isPast = (a) => {
 // console.log(isValid(d))
 // console.log(isValid(NaN))
 // console.log(d.getTime())
+// console.log(isBefore(new Date('1992-01-01'), new Date('1992-01-02')))
 
 
 
