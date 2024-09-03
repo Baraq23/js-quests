@@ -1,7 +1,8 @@
 
 const isValid = (a) => {
 
-    if ((typeof a === 'number') && ((new Date(a)) instanceof Date)) {
+    if ((typeof a === 'number')) {
+        a = new Date(a)
         return true
     }
     return a instanceof Date && !isNaN(a);
