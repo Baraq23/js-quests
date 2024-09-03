@@ -2,14 +2,14 @@ const addWeek = (date) => {
     const weekday = [
         "Monday",
         "Tuesday",
-        "Wednessday",
+        "Wednesday",
         "Thursday",
         "Friday",
         "Sarurday",
         "Sunday",
         "secondMonday",
-        "secondTeusday",
-        "secondWednessday",
+        "secondTuesday",
+        "secondWednesday",
         "secondThursday",
         "secondFriday",
         "secondSarurday",
@@ -43,6 +43,15 @@ const timeTravel = (obj) => {
 
     return new Date(dStr)
 }
+
+
+// console.log(addWeek(new Date('0001-01-01'))) // Output: Monday
+// console.log(addWeek(new Date('0001-01-02'))) // Output: Tuesday
+// console.log(addWeek(new Date('0001-01-07'))) // Output: Sunday
+// console.log(addWeek(new Date('0001-01-08'))) // Output: secondMonday
+// console.log(addWeek(new Date('0001-01-09'))) // Output: secondTuesday
+// console.log(addWeek(new Date('0001-01-03'))) // Output: Wednessday
+
 
 // console.log(addWeek('0001-01-14'))
 // console.log(timeTravel({
