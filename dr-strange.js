@@ -1,7 +1,7 @@
 const addWeek = (date) => {
     const weekday = [
         "Monday",
-        "Teusday",
+        "Tuesday",
         "Wednessday",
         "Thursday",
         "Friday",
@@ -53,4 +53,5 @@ const timeTravel = (obj) => {
 //   }).toString()
 //   )
 
+// console.log(addWeek(new Date('0001-01-02')))
 
