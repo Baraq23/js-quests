@@ -11,9 +11,8 @@ const firstDayWeek = (week, year) => {
         timeAfterWeeks += resetWeek
         // timeAfterWeeks -= (7 * 24 * 60 * 60 * 1000)
     }
-  
     let d = new Date(timeAfterWeeks)
-    // console.log(d.toDateString())
+    console.log(d.toDateString())
     return formatDate(d)
   
 }
