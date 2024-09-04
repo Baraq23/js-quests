@@ -15,9 +15,6 @@ const firstDayWeek = (week, year) => {
   
 }
 
-
-
-
 const formatDate = (date) => {
     let dd = date.getDate();
     if (dd < 10) dd = "0" + dd;
@@ -29,18 +26,17 @@ const formatDate = (date) => {
     }
     if (yy > 99 && yy < 1000) {
         yy = '0'+yy
-    }
-    if (yy > 9 && yy < 1000) {
-        yy = '0'+yy
-    }
-    
+    } 
+    if (yy > 9 && yy <= 99) {
+        yy = '00'+yy
+    }    
     return dd + "-" + mm + "-" + yy;
 }
 
 
 // console.log(firstDayWeek(2, "0001"));  // Output: "01-01-1000"
-// console.log(firstDayWeek(2, "030"));  // Output: "01-01-1000"
-console.log(firstDayWeek(1, "0005"));  // Output: "01-01-1000"
+// console.log(firstDayWeek(23, '0099'));  // Output: "01-01-1000"
+// console.log(firstDayWeek(1, "0005"));  // Output: "01-01-1000"
 // firstDayWeek(2, "0000");  // Output: "08-01-0001"
 // firstDayWeek(2, "0001"); // Output: "08-01-0001"
 // console.log(new Date('0000-01-01').toDateString())
