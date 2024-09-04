@@ -10,6 +10,7 @@ const firstDayWeek = (week, year) => {
         let resetWeek = ((7 - (day1ofYr.getDay())) - 6) * 24 * 60 * 60 * 1000
         timeAfterWeeks += resetWeek
     }
+    timeAfterWeeks -= (7 * 24 * 60 * 60 * 1000)
     let d = new Date(timeAfterWeeks)
     console.log(d.toDateString())
     return formatDate(d)
