@@ -15,7 +15,7 @@ const firstDayWeek = (week, year) => {
         timeAfterWeeks += (7 * 24 * 60 * 60 * 1000)
     }
     if  (week = 52) {
-        timeAfterWeeks += (7 * 24 * 60 * 60 * 1000)
+        timeAfterWeeks += (14 * 24 * 60 * 60 * 1000)
     }
     if  (week = 1) {
         timeAfterWeeks -= (7 * 24 * 60 * 60 * 1000)
@@ -48,5 +48,5 @@ const formatDate = (date) => {
 
 // console.log(firstDayWeek(1, "0000"));  // Output: "01-01-1000"
 // console.log(firstDayWeek(2, "0000"));  // Output: "01-01-1000"
-// console.log(firstDayWeek(52, '1000'));  // Output: "22-12-1000"
+console.log(firstDayWeek(52, '1000'));  // Output: "22-12-1000"
 
