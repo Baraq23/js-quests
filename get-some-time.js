@@ -11,6 +11,7 @@ const firstDayWeek = (week, year) => {
         timeAfterWeeks += resetWeek
     }
     let d = new Date(timeAfterWeeks)
+    console.log(d.toDateString())
     return formatDate(d)
   
 }
@@ -21,22 +22,19 @@ const formatDate = (date) => {
     let mm = date.getMonth() + 1;
     if (mm < 10) mm = "0" + mm;
     let yy = date.getFullYear().toString();
-    if (yy < 9){
-        yy = '000'+yy
+    if (yy < 9) {
+        yy = '000' +yy
     }
-    if (yy > 99 && yy < 1000) {
-        yy = '0'+yy
-    } 
+
     if (yy > 9 && yy <= 99) {
-        yy = '00'+yy
-    }    
+        yy = '00' +yy
+    }
+    if (yy > 99 && yy <= 999) {
+        yy = '0' +yy
+    }
     return dd + "-" + mm + "-" + yy;
 }
 
 
-// console.log(firstDayWeek(2, "0001"));  // Output: "01-01-1000"
-// console.log(firstDayWeek(23, '0099'));  // Output: "01-01-1000"
-// console.log(firstDayWeek(1, "0005"));  // Output: "01-01-1000"
-// firstDayWeek(2, "0000");  // Output: "08-01-0001"
-// firstDayWeek(2, "0001"); // Output: "08-01-0001"
-// console.log(new Date('0000-01-01').toDateString())
+// console.log(firstDayWeek(2, "0000"));  // Output: "01-01-1000"
+// console.log(firstDayWeek(4, "0021"));  // Output: "01-01-1000"
