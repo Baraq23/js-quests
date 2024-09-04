@@ -6,13 +6,11 @@ const firstDayWeek = (week, year) => {
     let timeDay1 = day1ofYr.getTime()
     let weekSecs = 24 * 60 * 60 * 1000 * 7 * (week-1)
     let timeAfterWeeks =  timeDay1 + weekSecs
-    if (week > 1) {
-        let resetWeek = ((7 - (day1ofYr.getDay())) - 6) * 24 * 60 * 60 * 1000
-        timeAfterWeeks += resetWeek
-        // timeAfterWeeks -= (7 * 24 * 60 * 60 * 1000)
+    let currentYr = (new Date(timeAfterWeeks).getYear())
+    while ((new Date(timeAfterWeeks).getDay()) !== 1 && new Date(new Date(timeAfterWeeks).getTime() - 86400000).getYear() === currentYr ) {
+        timeAfterWeeks -= 24 * 60 * 60 * 1000
     }
     let d = new Date(timeAfterWeeks)
-    console.log(d.toDateString())
     return formatDate(d)
   
 }
@@ -40,4 +38,7 @@ const formatDate = (date) => {
 // console.log(firstDayWeek(1, '1000'));  // Output: "01-01-1000"
 // console.log(firstDayWeek(2, "0000"));  // Output: "01-01-1000"
 // console.log(firstDayWeek(52, '1000'));  // Output: "22-12-1000"
+// console.log(firstDayWeek(2, '2017'))
+
+
 
