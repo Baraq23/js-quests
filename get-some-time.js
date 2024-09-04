@@ -17,6 +17,9 @@ const firstDayWeek = (week, year) => {
     if  (week = 52) {
         timeAfterWeeks += (7 * 24 * 60 * 60 * 1000)
     }
+    if  (week = 1) {
+        timeAfterWeeks -= (7 * 24 * 60 * 60 * 1000)
+    }
     let d = new Date(timeAfterWeeks)
     // console.log(d.toDateString())
     return formatDate(d)
