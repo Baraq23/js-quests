@@ -24,12 +24,27 @@ const formatDate = (date) => {
     let mm = date.getMonth() + 1;
     if (mm < 10) mm = "0" + mm;
     let yy = date.getFullYear().toString();
+    // console.log(typeof yy)
+    // console.log(yy)
+    if (yy < 9){
+        yy = '000'+yy
+    }
+    if (yy > 9) {
+        yy = '00'+yy
+    }
+    if (yy > 99) {
+        yy = '0'+yy
+    }
+    if (yy > 999) {
+        yy = yy
+    }
     return dd + "-" + mm + "-" + yy;
 }
 
 
-// console.log(firstDayWeek(2, "0000"));  // Output: "01-01-1000"
-// console.log(firstDayWeek(1, "1000"));  // Output: "01-01-1000"
+// console.log(firstDayWeek(2, "0001"));  // Output: "01-01-1000"
+// console.log(firstDayWeek(2, "030"));  // Output: "01-01-1000"
+// // console.log(firstDayWeek(1, "1000"));  // Output: "01-01-1000"
 // firstDayWeek(2, "0000");  // Output: "08-01-0001"
 // firstDayWeek(2, "0001"); // Output: "08-01-0001"
 // console.log(new Date('0000-01-01').toDateString())
