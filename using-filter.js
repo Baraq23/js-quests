@@ -17,7 +17,7 @@ const filter5Vowels = (arr) => {
 }
 
 const filter1DistinctVowel = (arr) => {
-    const reg = /^[^aeiou]*([aeiou])[^aeiou]*\1*[^aeiou]*$/i
+    const reg = /[aeiou]*([aeiou])[^aeiou]*\1*[^aeiou]*$/i
     const res = arr.filter((x) => x.match(reg))
     return res
 }
@@ -73,4 +73,13 @@ const multiFilter = (obj) => {
 //     }
 // ]
 
-// console.log(multiFilter(objj))
+// console.log(filter1DistinctVowel([
+//     'Alabama',
+//     'Alaska',
+//     'Arkansas',
+//     'Kansas',
+//     'Maryland',
+//     'Mississippi',
+//     'New Jersey',
+//     'Tennessee',
+//   ]))
