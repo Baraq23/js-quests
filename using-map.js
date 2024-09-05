@@ -23,7 +23,7 @@ const upperCasingStates = (arr) => {
 const fahrenheitToCelsius = (arr) => {
     const map = arr.map((x) => {
         let num = Number(x.slice(0,-2))
-        let newStr = String(Math.round((num-32)/1.8)) + x.slice(-2)
+        let newStr = String(Math.round((num-32)/1.8)) + '°C'
        return newStr
 
     })
