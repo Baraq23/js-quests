@@ -17,9 +17,13 @@ const filter5Vowels = (arr) => {
 }
 
 const filter1DistinctVowel = (arr) => {
-    const reg = /[aeiou]*([aeiou])[^aeiou]*\1*[^aeiou]*$/i
-    const res = arr.filter((x) => x.match(reg))
-    return res
+    return arr.filter(str => {
+        const vowels = str.match(/[aeiou]/i);
+
+        if (!vowels) return false;
+        const distinctVowels = new Set(vowels.map(v => v.toLowerCase()))
+        return distinctVowels.size === 1
+    })
 }
 //  reg: /^[^aeiou]*([aeiou])[^aeiou]*\1*[^aeiou]*$/i;
 
