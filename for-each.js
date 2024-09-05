@@ -1,1 +1,5 @@
-const forEach = (array, action) => array.forEach((item, index) => action(item, index, array));
+const forEach = (array, action) => {
+    for (let i = 0; i < array.length; i++) {
+        action(array[i], i, array);
+    }
+};
