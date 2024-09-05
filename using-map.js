@@ -20,10 +20,16 @@ const upperCasingStates = (arr) => {
     return map
 }
 
+const fToC = (n) => {
+    let t = Number(n.slice(0,-2))
+    let temp = Math.floor((t-32)/1.8)
+    return temp
+}
+
 const fahrenheitToCelsius = (arr) => {
     const map = arr.map((x) => {
         let num = Number(x.slice(0,-2))
-        let newStr = String(Math.round((num-32)/1.8)) + '°C'
+        let newStr = String(Math.floor((num-32)/1.8)) + '°C'
        return newStr
 
     })
@@ -39,11 +45,7 @@ const trimTemp = (obj) => {
 }
 
 
-const fToC = (n) => {
-    let t = Number(n.slice(0,-2))
-    let temp = Math.round((t-32)/1.8)
-    return temp
-}
+
 
 const toCap = (s) => {
     let sl = s.split(' ')
@@ -67,6 +69,9 @@ const tempForecasts = (obj) => {
     return map
 }
 
+
+// console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']))
+
 // console.log(tempForecasts([
 //     {
 //       city: 'Pasadena',
@@ -81,15 +86,10 @@ const tempForecasts = (obj) => {
 //     region: 'Nyanza',
 //     }
 //   ]))
+// console.log(fToC('101ff'))
 
-// console.log(trimTemp([
-//     {
-//       city: 'Pasadena',
-//       temperature: ' 101 °F',
-//       state: 'california',
-//       region: 'West',
-//     },
-//   ]))
+
+
 
   
 
