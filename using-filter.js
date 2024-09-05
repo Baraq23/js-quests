@@ -18,7 +18,7 @@ const filter5Vowels = (arr) => {
 
 const filter1DistinctVowel = (arr) => {
     return arr.filter(str => {
-        const vowels = str.match(/[aeiou]/i);
+        const vowels = str.match(/[aeiou]/gi);
 
         if (!vowels) return false;
         const distinctVowels = new Set(vowels.map(v => v.toLowerCase()))
@@ -77,13 +77,13 @@ const multiFilter = (obj) => {
 //     }
 // ]
 
-// console.log(filter1DistinctVowel([
-//     'Alabama',
-//     'Alaska',
-//     'Arkansas',
-//     'Kansas',
-//     'Maryland',
-//     'Mississippi',
-//     'New Jersey',
-//     'Tennessee',
-//   ]))
+console.log(filter1DistinctVowel([
+    'Alabama',
+    'Alaska',
+    'Arkansas',
+    'Kansas',
+    'Maryland',
+    'Mississippi',
+    'New Jersey',
+    'Tennessee',
+  ]))
