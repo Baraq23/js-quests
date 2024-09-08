@@ -19,9 +19,9 @@ export function getActive() {
     select('a.classical:not(.active)')
   ];
 }
-export function getBonannoPisano() {
-  return [
-    selectOne('#BonannoPisano'),
-    select('a.classical.active')
-  ];
-}
+// export function getBonannoPisano() {
+//   return [
+//     selectOne('#BonannoPisano'),
+//     select('a.classical.active')
+//   ];
+// }
