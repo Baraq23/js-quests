@@ -22,22 +22,22 @@ const omit = (obj, arr) => {
     let val = Object.values(obj)
     let i = 0
 
-    if (arr instanceof Array) {
+    if (typeof(arr) === "string") {
         for (let char of keys) {
-            if (!arr.includes(char)) {
+            if (char !== arr)  {
+                newObj[char] = val[i]
+            }
+            i++
+        }
+    } else {
+        for (let char of keys) {
+            if (!(arr.includes(char))) {
                 newObj[char] = val[i]
             }
             i++
         }
     }
-    if (typeof(arr) == "string") {
-        for (let char of keys) {
-            if (!keys.includes(arr)) {
-                newObj[char] = val[i]
-            }
-            i++
-        }
-    }
+    
     return newObj
 }
 
@@ -45,6 +45,13 @@ const omit = (obj, arr) => {
 // console.log(omiti("hello"))
 // console.log(omiti(['something', "sm"]))
 // console.log(omiti(['something']))
+
+// const ex = {
+//        England: 'english',
+//        Portugal: 'portuguese'
+//      }
+
+//      console.log(omit(ex, 'Portugal'))
 
 
 // console.log(omit({ something: 5, sm: { d: 6 } }, ['something', "sm"]))
