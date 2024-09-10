@@ -19,16 +19,23 @@ const pick = (obj, arr) => {
 const omit = (obj, arr) => {
     let newObj = {}
     let keys = Object.keys(obj)
+    let val = Object.values(obj)
+    let i = 0
+
     if (arr instanceof Array) {
-        for (let i = 0; i < arr.length; i++) {
-            if (!keys.includes(arr[i])) {
-                newObj[arr[i]] = obj[arr[i]]
+        for (let char of keys) {
+            if (!arr.includes(char)) {
+                newObj[char] = val[i]
             }
+            i++
         }
     }
-    if (typeof arr == "string") {
-        if (!keys.includes(arr)) {
-            newObj[arr] = obj[arr]
+    if (typeof(arr) == "string") {
+        for (let char of keys) {
+            if (!keys.includes(arr)) {
+                newObj[char] = val[i]
+            }
+            i++
         }
     }
     return newObj
