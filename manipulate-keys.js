@@ -19,14 +19,13 @@ const mapKeys = (obj, f) => {
     return newObj
 }
 
-const reduceKeys = (obj, f, acc) => {    
-    let str = ""
-    if (acc !== undefined){
-        str = acc
+const reduceKeys = (obj, f, str) => {    
+    if (str === undefined){
+        str = ""
     }
     let i = 0
     for (let key in obj) {
-        if (i===0) {
+        if (i===0 && str === '') {
             str = key
             i++
             continue            
@@ -39,7 +38,7 @@ const reduceKeys = (obj, f, acc) => {
 
 
 
-// console.log(reduceKeys(nutrients, (acc, cr) =>acc.concat(', ', cr)))
+// console.log(reduceKeys(nutrients, (acc, cr) => `${acc}${cr}:`, ':'))
 // output: carbohydrates, protein, fat
 
 // console.log(mapKeys(nutrients, (k) => `-${k}`))
