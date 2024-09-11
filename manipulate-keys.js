@@ -1,4 +1,4 @@
-const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
+// const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
 
 const filterKeys = (obj, f) => {
     let newObj = {}
@@ -19,17 +19,20 @@ const mapKeys = (obj, f) => {
     return newObj
 }
 
-const reduceKeys = (obj, f) => {
+const reduceKeys = (obj, f, acc) => {    
     let str = ""
-    // let i = 0
+    if (acc !== undefined){
+        str = acc
+    }
+    let i = 0
     for (let key in obj) {
-        // if (i===0) {
-        //     str = key
-        //     i++
-        //     continue            
-        // }
+        if (i===0) {
+            str = key
+            i++
+            continue            
+        }
         str = f(str, key)
-        // i++
+        i++
     }
     return str
 }
