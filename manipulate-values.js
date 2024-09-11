@@ -24,8 +24,10 @@ const mapValues = (obj, f) => {
     return newObj
 }
 
-const reduceValues = (obj, f) => {
-    let redVal = 0
+const reduceValues = (obj, f, redVal) => {
+    if (redVal === undefined) {
+        redVal = 0
+    }
     let keys = Object.keys(obj)
     let values = Object.values(obj)
     for (let i = 0; i < keys.length; i++) {
@@ -35,7 +37,7 @@ const reduceValues = (obj, f) => {
 }
 
 // console.log(reduceValues(nutrients, (acc, cr) => acc + cr))
-
+console.log(reduceValues({ a: 1, b: 2, c: 3 }, (acc, cr) => acc + cr, 3))
 
 
 // console.log(mapValues(nutrients, (v) => v+1))
