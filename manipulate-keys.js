@@ -21,15 +21,15 @@ const mapKeys = (obj, f) => {
 
 const reduceKeys = (obj, f) => {
     let str = ""
-    let i = 0
+    // let i = 0
     for (let key in obj) {
-        if (i===0) {
-            str = key
-            i++
-            continue            
-        }
+        // if (i===0) {
+        //     str = key
+        //     i++
+        //     continue            
+        // }
         str = f(str, key)
-        i++
+        // i++
     }
     return str
 }
